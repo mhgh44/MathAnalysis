@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{xecolor}
+\usepackage{mathtools}
 \usepackage{upgreek}
 \usepackage{pgfplots}
 \usepgfplotslibrary{fillbetween}
@@ -1628,11 +1629,11 @@ $\lim_{n \to \infty} P^*_n(x) = |x| $
 P_n(x) = P_n^*(x) - P_n^*(0)
 \]
 \[
-p_n(0) = P_n^*(0) - P_n^*(0) = 0
+P_n(0) = P_n^*(0) - P_n^*(0) = 0
 \]
 در این صورت خواهیم داشت
 \[
-\lim_{n to \infty} P_n(x) = |x| \quad , \quad P_n(0) = 0 \quad ; \quad \forall n \in \mathbb{N}
+\lim_{n \to \infty} P_n(x) = |x| \quad , \quad P_n(0) = 0 \quad ; \quad \forall n \in \mathbb{N}
 \]
 
 \textbf{تعریف:}
@@ -1657,9 +1658,9 @@ $f \in A$
  آنگاه جبر
 $A$
 یک جبر به طوریکنواخت بسته نامیده می‌شود.
-\textbf{تعریف:}
 
-فرض کنید 
+\textbf{تعریف:}
+فرض کنید
 $B$
  مجموعه تمام می‌شود دنباله های به طور یکنواخت همگرا از توابع
  $A$
@@ -1668,6 +1669,129 @@ $B$
  بستار یا بسته یکنواخت 
  $A$
  نامیده می‌شود.
+
+
+\[
+f, g \in \bar{A}
+\]
+\[
+\begin{rcases}
+	\exists \{f_n\} \subseteq A \\
+	\exists \{g_n\} \subseteq A
+\end{rcases}
+ \rightarrow
+\begin{array}{r@{\;}l}
+	  f_n  \overset{u.}{\rightarrow} f \\
+	 g_n  \overset{u.}{\rightarrow} g\\
+\end{array}
+\]
+\[
+\begin{rcases}
+		f_n \times g_n  \overset{u.}{\rightarrow} f \times g \\
+		f_n + g_n  \overset{u.}{\rightarrow} f + g \\
+		\forall c \in \mathbb{C} \quad ; \quad c \times f_n  \overset{u.}{\rightarrow} c \times f 
+\end{rcases}
+\rightarrow
+\begin{array}{r@{\;}l}
+	f + g \, , \, f \times g \,,\, c \times f \in A
+\end{array}
+\]
+
+\textbf{تعریف:}
+فرض کنیم 
+$A$
+مجموعه ای از توابع بر مجموعه 
+$E$
+باشد گوییم
+$A$
+نقاط 
+$E$
+را جدا می‌کند
+\[
+\forall x_1 , x_2 \in E \qquad \exists f \in A \quad , \quad f(x_1) = f(x_2)
+\]
+گوییم 
+$A$
+در هیچ نقطه از 
+$E$
+صفر می‌شود هرگاه
+\[
+\forall x \in E \quad ; \quad \exists f \in A \quad ; \quad f(x) \neq 0
+\]
+
+\textbf{قضیه تعمیم قضیه استون-وایرشترای:}
+فرض کنید 
+$A$
+یک جبر از توابع حقیقی پیوسته بر مجموعه فشرده 
+$K$
+ باشد هرگاه 
+ $A$
+نقاط 
+$K$
+را جدا کند و در هیچ نقطه ای از 
+$K$
+صفر شود آنگاه بستار یکنواخت 
+$B$
+از 
+$A$
+از تمام توابع حقیقی پیوسته بر 
+$K$
+تعریف شده است.
+
+
+
+ \textbf{نکته:}
+ خود قضیه وایرشتراس برای ریل ها و کامپلس مقدار ها صادقه اما تعمیم آن فقط برای حقیقی مقدار تنها در صورتی امکان پذیر است که خود الحاق شود.
+ 
+ \textbf{قضیه :}
+ فرض کنید 
+ $A$
+ جبری از توابع بر مجموعه 
+ $E$
+ باشد، 
+ $A$
+ نقاط 
+ $E$
+ را جدا کند و در هیچ نقطه ای صفر نشود.
+ $x_1 , x_2$
+  را نقاط متمایزی از 
+  $E$
+  در نظر می‌گیریم  و 
+  $c_1, c_2$
+  را ثابت های حقیقی یا مختلط در نظر بگیرید در این صورت
+  $A$
+  تابعی را شامل می‌شود که
+  \[
+  f(x_1) = c_1 , f(x_2) = c_2
+  \] 
+  \textbf{اثبات:}
+  طبق فرض  چون 
+  $A$
+  نقاط 
+  $E$
+  را جدا می‌کند و در هیچ نقطه ای از 
+  $E$
+  صفر نمی‌شود پس
+  \[
+  \exists g , h , k \in A \qquad g(x_1) \neq g(x_2) , h(x_1) \neq 0 , k(x_2) \neq 0
+  \]
+  قرار می‌دهیم
+  \[
+  u = gk - g(x_1)k , v = gh - g(x_2)h
+  \]
+  در این صورت چون 
+  $A$
+  جداست پس
+  $ u , v \in A$
+  
+  \[(x_1) = 0 , \quad v(x_1) = 0 , \quad u(x_2) = 0 , \quad v(x_2) = 0  , \quad f = \frac{c_1v}{v(x_1)} +\frac{c_2u}{u(x_2)}
+  \]
+  \[
+  f(x_1) = \frac{c_1 \times v(x_1)}{v(x_1)} + \frac{c_2 \times u(x_2)}{v(x_2)} = c_1
+  \]
+  
+
+
 
 
  
