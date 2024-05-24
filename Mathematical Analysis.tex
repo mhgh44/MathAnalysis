@@ -1789,8 +1789,113 @@ $K$
   \[
   f(x_1) = \frac{c_1 \times v(x_1)}{v(x_1)} + \frac{c_2 \times u(x_2)}{v(x_2)} = c_1
   \]
+  \chapter{سری فوریه}
+  \textbf{تعریف:}
+  چند جمله ای مثلثاتی مجموعی متناهی به شکل زیر است
+  \begin{equation}\label{eq15}
+  	   f(x) = a_0 + \sum_{n = 1}^{N} a_n \cos(nx) + b_n \sin{nx} =  \sum_{-N}^{N} c_n \rm e^{(inx)}
+  \end{equation}
+ 
+  فرض کنید 
+  $ n \in \mathbb{N}$
+  باشد در این صورت
+  \[
+  \rm (e^{inx})' = (\frac{\rm e^{inx}}{in})' \qquad (\rm e^u = u' \rm e^u)
+  \]
+  که دارای دوره تناوب 
+  $2n$
+  است لذا
+  \begin{equation*}
+  	\frac{1}{2\pi} \int_{-\pi}^{\pi} \mathrm{e}^{inx} \, \mathrm{d}x = \bigg\{
+  		\begin{array}{ll}
+  			1 & \text{if } \qquad n = 0 \\
+  			0 & \text{if }\qquad n \neq 0 \\
+  		\end{array}
+  \end{equation*}
   
-
+  طرفین رابطه 
+  \eqref{eq15}
+  را در
+  $\rm e^{-imx}$
+  که در آن 
+  $m \in \mathbb{Z}$
+  ضرب می‌کنیم اگر از این حاصل ضرب انتگرال بگیریم داریم:
+  \[
+  c_m = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)\mathrm{e}^{-imx} \, \mathrm{d}x
+  \]
+  
+  \[
+	f(x)\mathrm{e}^{-imx} = \sum_{-N}^{N} c_n \mathrm{e}^{i(n - m)x}
+  \]
+  \[
+  \int f(x)\mathrm{e}^{-imx} \, \mathrm{d}x = \sum_{-N}^{N} \int  c_n \mathrm{e}^{i(n - m)x}\, \mathrm{d}x
+  \]
+  چند جمله ای مثلثاتی 
+  $f$
+   که با رابطه 
+   \eqref{eq15}
+   داده شده است حقیقی است اگر و تنها اگر به ازای 
+   $$n = 0 , \dots N \qquad c_n = \bar c_n$$
+   
+   \textbf{سری فوریه}:
+   یک سری مثلثاتی را سری به شکل 
+   $$\sum_{-\infty}^{+\infty} c_n \mathrm{e}^{inx}$$
+   تعریف می‌کنیم که در آن
+   \[
+   c_m = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)\mathrm{e}^{-imx} \, \mathrm{d}x
+   \]
+   تعریف می‌شود سری فوق را سری فوریه و 
+   $c_m$
+   را به ازای 
+   $m \in \mathbb{Z}$
+   ضرایب فوریه تابع 
+   $f$
+   می‌نامیم.
+   \
+   
+   \textbf{قضیه:}
+   هرگاه 
+   $f$
+   با دوره تناوب 
+   $2\pi$
+   پیوسته باشد، 
+   $\varepsilon >0$
+   آنگاه چندجمله‌ای مثلثاتی مانند 
+   $P$
+   وجود دارد بطوریکه 
+   $$|P(x) - f(x)| < \varepsilon$$
+   
+   \textbf{اثبات:}
+   اگر 
+   $x , x + 2\pi$
+   را یکی بگیریم می‌توان بوسیله نگاشت
+   $ x \rightarrow \mathrm{e}^{ix}$
+   تابع های 
+   $2\pi$
+   متناوب بر 
+   $\mathbb{R}$
+   را توابعی بر دایره یکه 
+   $T$
+   تلقی کرد.
+   
+   چندجمله ای های مثلثاتی یک جبر خودالحاق مانند 
+   $A$
+   را می‌سازد که نقاط 
+   $T$
+   را جدا می‌کند و در هیچ نقطه ای صفر نمی‌شود لذا طبق تعمیم استون-وایرشتراس جبر 
+   $A$
+   در
+   $\tau(T)$
+   چگال است 
+   $$\tau(T) = \bar A$$
+   طبق تعمیم استون-وایرشتراس همگراست
+   
+   
+   
+   
+   
+   
+  
 
 
 
